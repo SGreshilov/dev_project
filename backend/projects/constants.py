@@ -1,0 +1,3 @@
+PROJECT_TYPES_CHOICES = (
+
+)
