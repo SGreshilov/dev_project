@@ -42,16 +42,13 @@ class Property(models.Model):
         decimal_places=2,
         max_digits=20
     )
-    # TODO Property status choices
     status = models.IntegerField(
-        choices=PropertyStatus,
-        # max_length=64,
+        choices=PropertyStatus.choices,
         verbose_name='Статус',
         default=PropertyStatus.ON_SALE
     )
-    # TODO Property type choices
     type = models.CharField(
-        choices=PropertyType,
+        choices=PropertyType.choices,
         max_length=64,
         verbose_name='Тип помещения',
         default=PropertyType.FLAT
