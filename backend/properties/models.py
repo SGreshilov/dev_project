@@ -1,6 +1,6 @@
 from django.db import models
 
-from .constants import PROPERTY_STATUS_CHOICES, PROPERTY_TYPE_CHOICES
+from .constants import PropertyType, PropertyStatus
 
 
 class Property(models.Model):
@@ -43,16 +43,18 @@ class Property(models.Model):
         max_digits=20
     )
     # TODO Property status choices
-    status = models.CharField(
-        choices=PROPERTY_STATUS_CHOICES,
-        max_length=64,
-        verbose_name='Статус'
+    status = models.IntegerField(
+        choices=PropertyStatus,
+        # max_length=64,
+        verbose_name='Статус',
+        default=PropertyStatus.ON_SALE
     )
     # TODO Property type choices
     type = models.CharField(
-        choices=PROPERTY_TYPE_CHOICES,
+        choices=PropertyType,
         max_length=64,
-        verbose_name='Тип помещения'
+        verbose_name='Тип помещения',
+        default=PropertyType.FLAT
     )
     is_active = models.BooleanField(default=True, verbose_name='Активно')
 
