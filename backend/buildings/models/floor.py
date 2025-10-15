@@ -1,34 +1,29 @@
 from django.db import models
 
-from projects.models import Project
-
-from .building import Building
-from .section import Section
-
 
 class Floor(models.Model):
     """
     Модель этажа
     """
     project = models.ForeignKey(
-        Project,
+        to='projects.Project',
         on_delete=models.CASCADE,
         related_name='floors',
         verbose_name='Проект ЖК'
     )
     building = models.ForeignKey(
-        Building,
+        to='Building',
         on_delete=models.CASCADE,
         related_name='floors',
         verbose_name='Корпус'
     )
     section = models.ForeignKey(
-        Section,
+        to='Section',
         on_delete=models.CASCADE,
         related_name='floors',
         verbose_name='Секция/подъезд'
     )
-    number = models.IntegerField()
+    number = models.IntegerField(verbose_name='Номер')
     is_active = models.BooleanField(default=True, verbose_name='Активно')
 
     class Meta:
