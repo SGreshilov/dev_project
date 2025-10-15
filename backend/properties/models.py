@@ -32,8 +32,16 @@ class Property(models.Model):
         verbose_name='Этаж'
     )
     number = models.IntegerField(verbose_name='Номер')
-    area = models.DecimalField(verbose_name='Местоположение', decimal_places=2)
-    price = models.DecimalField(verbose_name='Цена', decimal_places=2)
+    area = models.DecimalField(
+        verbose_name='Местоположение',
+        decimal_places=2,
+        max_digits=10
+    )
+    price = models.DecimalField(
+        verbose_name='Цена',
+        decimal_places=2,
+        max_digits=20
+    )
     # TODO Property status choices
     status = models.CharField(
         choices=PROPERTY_STATUS_CHOICES,
@@ -51,3 +59,6 @@ class Property(models.Model):
     class Meta:
         verbose_name = 'Объект собственности'
         verbose_name_plural = 'Объекты собственности'
+
+    def __str__(self):
+        return f'{self.project} - {self.building} - {self.section} - {self.floor} - {self.number}'

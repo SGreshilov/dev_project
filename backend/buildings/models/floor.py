@@ -29,3 +29,6 @@ class Floor(models.Model):
     class Meta:
         verbose_name = 'Этаж'
         verbose_name_plural = 'Этажи'
+
+    def __str__(self):
+        return f'{self.project} - {self.building} - {self.section} - {self.number}'

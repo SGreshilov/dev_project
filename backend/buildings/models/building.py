@@ -8,7 +8,8 @@ class Building(models.Model):
     project = models.ForeignKey(
         to='projects.Project',
         on_delete=models.CASCADE,
-        verbose_name='Проект ЖК'
+        verbose_name='Проект ЖК',
+        related_name='buildings'
     )
     number = models.CharField(max_length=64, verbose_name='Номер')
     commission_date = models.DateField(verbose_name='Срок сдачи')
@@ -17,3 +18,6 @@ class Building(models.Model):
     class Meta:
         verbose_name = 'Корпус'
         verbose_name_plural = 'Корпуса'
+
+    def __str__(self):
+        return f'{self.project} - {self.number}'

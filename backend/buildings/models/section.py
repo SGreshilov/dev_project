@@ -24,3 +24,6 @@ class Section(models.Model):
     class Meta:
         verbose_name = 'Секция/подъезд'
         verbose_name_plural = 'Секции/подъезды'
+
+    def __str__(self):
+        return f'{self.project} - {self.building} - {self.number}'
