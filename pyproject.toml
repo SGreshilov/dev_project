@@ -8,7 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = "~3.11"
 dependencies = [
-    "django (>=4.1,<4.2)"
+    "django (>=4.1,<4.2)",
+    "django-admin-list-filter-dropdown (>=1.0.3,<2.0.0)"
 ]
 
 

@@ -37,6 +37,18 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-admin-list-filter-dropdown"
+version = "1.0.3"
+description = "Use dropdowns in Django admin list filter"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "django-admin-list-filter-dropdown-1.0.3.tar.gz", hash = "sha256:07cd37b6a9be1b08f11d4a92957c69b67bc70b1f87a2a7d4ae886c93ea51eb53"},
+    {file = "django_admin_list_filter_dropdown-1.0.3-py3-none-any.whl", hash = "sha256:bf1b48bab9772dad79db71efef17e78782d4f2421444d5e49bb10e0da71cd6bb"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.5.3"
 description = "A non-validating SQL parser."
@@ -68,4 +80,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "~3.11"
-content-hash = "831588e09b4cd389ab175aa2b534913e063f58a688a6f11cadaba11088cc8097"
+content-hash = "39212e733d7664981b03210572ee880f7e48d8ff3c4ed3b80b355cc70d40bf88"
