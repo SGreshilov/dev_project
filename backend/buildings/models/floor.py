@@ -31,4 +31,4 @@ class Floor(models.Model):
         verbose_name_plural = 'Этажи'
 
     def __str__(self):
-        return f'{self.project} - {self.building} - {self.section} - {self.number}'
+        return f'{self.section} - {self.number}'

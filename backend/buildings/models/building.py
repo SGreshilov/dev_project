@@ -20,4 +20,4 @@ class Building(models.Model):
         verbose_name_plural = 'Корпуса'
 
     def __str__(self):
-        return f'{self.project} - {self.number}'
+        return f'{self.project} - {self.number} '

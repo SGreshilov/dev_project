@@ -26,4 +26,4 @@ class Section(models.Model):
         verbose_name_plural = 'Секции/подъезды'
 
     def __str__(self):
-        return f'{self.project} - {self.building} - {self.number}'
+        return f'{self.building} - {self.number}'
